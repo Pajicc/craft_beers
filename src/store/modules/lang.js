@@ -1,10 +1,3 @@
-/**
- * Import Dependency
- */
-import {
-	SET_LANGUAGE
-} from '../mutation_types'
-
 import i18n from '../../locales'
 
  const state = {
@@ -13,12 +6,12 @@ import i18n from '../../locales'
 
  const actions = {
 	switchI18n({ commit }, context) {
-		commit(SET_LANGUAGE, context)
+		commit('setLanguage', context)
 	}
 }
 
 const mutations = {
-	[SET_LANGUAGE](state, data) {
+	setLanguage(state, data) {
 		i18n.locale = data
 		state.language = data
 		// localStorage.setItem('language', data)

@@ -10,7 +10,7 @@ import Router from 'vue-router'
  * const X = () => import('@/pages/xxx/xxx.vue')
  */
 const Home = () => import('@/pages/home/home.vue')
-const SignUp = () => import('@/pages/signUp/signUp.vue')
+const Register = () => import('@/pages/register/register.vue')
 /**
  * Config
  */
@@ -30,9 +30,9 @@ const router = new Router({
 				name: 'home'
 			},
 			{
-				path: '/signUp',
-				component: SignUp,
-				name: 'signUp'
+				path: '/register',
+				component: Register,
+				name: 'register'
 			}
 		]
 	})

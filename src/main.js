@@ -16,9 +16,9 @@ import { sync } from 'vuex-router-sync'
 import i18n from './locales'
 import router from './router'
 import VueFire from 'vuefire'
-import firebase from './firebase/firebase'
-Vue.prototype.$firebase = firebase
-Vue.prototype.$db = firebase.database()
+var firebase = require('./firebase/firebase')
+Vue.prototype.$firebase = firebase.firebaseApp
+// Vue.prototype.$beersRef = firebase.beersRef
 /**
  * Import Component (.vue)
  */
